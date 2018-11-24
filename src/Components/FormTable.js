@@ -23,7 +23,7 @@ class FormTable extends React.Component {
         this.state = { rows, selectedIndexes: [] }
     }
     componentDidUpdate() {
-        console.log('formTable loaded')
+        console.log(this.state)
     }
     rowGetter = i => {
         return this.state.rows[i]
@@ -75,16 +75,21 @@ class FormTable extends React.Component {
     }
     deleteRow = () => { 
         console.log(this.state.selectedIndexes)
-        this.state.rows.splice(this.state.selectedIndexes, 1)
-        // this.state.rows.filter(function() {
-        //     console.log(this.state.rows)
-        //     if(this.state.rows === this.state.selectedIndexes) {
-        //         return false
-        //     } else {
-        //         return true
-        //     }
-        // })
-        this.setState(this.state.rows)
+        const selectedIndexes = this.state.selectedIndexes
+        // delete one item at once
+        //this.state.rows.splice(this.state.selectedIndexes, 1)
+        // delete multiple items at once
+        const filteredRows = this.state.rows.filter(function(element, index) {
+            // user indexOf method to find
+            if(selectedIndexes.indexOf(index) >= 0) {
+                return false
+            } else {
+                return true
+            }
+        })
+        this.setState({
+            rows: filteredRows
+        })
     }
 
     submit() {

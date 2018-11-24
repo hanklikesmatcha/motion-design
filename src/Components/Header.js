@@ -12,8 +12,8 @@ class Header extends Component {
                     LOGO
                 </Typography> 
                 <Typography variant='display1' style={styles.userName}>
-                    Jack Black
-                    <Avatar>JB</Avatar>
+                    <Avatar style={styles.avatar}r>JB</Avatar>
+                    <text>Jack Black</text>
                 </Typography>
                 <Typography variant='display2' style={styles.subTitle}>
                     Product View
@@ -24,6 +24,9 @@ class Header extends Component {
 }
 const styles = {
     header: {
+    },
+    avatar: {
+        float: "left"
     },
     userName: {
         // textAlign: 'right'
