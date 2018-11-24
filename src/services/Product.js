@@ -20,7 +20,7 @@ function postJson(url, data) {
         body: JSON.stringify(data),
     })
      // get json
-    .then(response => response.json())
+    // .then(response => response.json())
 }
 
 // return objects

@@ -10,15 +10,15 @@ class App extends Component {
 
     return (
       <div>
-        <div>
-          <Header />
-        </div>
-        <div>
-          <Form />
-        </div>
-        <div>
-          <Orders />
-        </div>
+          <div>
+              <Header />
+          </div>
+          <div>
+              <Form />
+          </div>
+          <div>
+              <Orders />
+          </div>
       </div>
     )
   }

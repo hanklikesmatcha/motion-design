@@ -81,7 +81,7 @@ class FormTable extends Component {
         console.log(this.state)
         // post data to server
         const data = {data: this.state}
-        // postData(data)
+        postData(data)
     }
 
     render() {

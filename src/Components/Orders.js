@@ -10,17 +10,16 @@ class Orders extends Component {
     componentDidMount() {
         getData().then(data => console.log(data))// TODO
         console.log('orders loaded')
+        this.setState(this.data)
     }
 
     render() {
+        const data = this.state
         return (
             <div>
                 <List>
                     <ListItem>
-                        <ListItemText primary="Orders" />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="Orders" />
+                        {data}
                     </ListItem>
                 </List>
             </div>
