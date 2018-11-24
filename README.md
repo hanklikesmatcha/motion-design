@@ -2,7 +2,7 @@
 
 ### server setup
 1. npm run server or java -jar server-1.0.3.jar
-2. go to http://localhost:8181/openapi.json 
+*2. (optional)go to http://localhost:8181/openapi.json*
 
 ### npm start
 

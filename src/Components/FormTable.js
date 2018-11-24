@@ -100,11 +100,9 @@ class FormTable extends React.Component {
             colour: this.props.getData.colour,
             rows: this.state.rows,
         }
-        console.log(data)
+        console.log("========", data)
         // post data to server
-        // const data = {data: this.state}
-        postData(data)
-        window.location.reload()
+        postData(data).then(() => {window.location.reload()})
     }
 
     render() {

@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
+import Typography from '@material-ui/core/Typography'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
+
+import TableBody from '@material-ui/core/TableBody'
+import TableCell from '@material-ui/core/TableCell'
+import TableHead from '@material-ui/core/TableHead'
+import TableRow from '@material-ui/core/TableRow'
+import Paper from '@material-ui/core/Paper'
 
 import { getData, getSuburbs, getMaterials, getColours } from '../services/Product'
 
@@ -24,7 +31,10 @@ class Orders extends Component {
         const {data, suburbs, material, colour} = this.state
         return (
             <div>
-                <List>
+                <Typography variant='display1'>
+                    Orders
+                </Typography>
+                {/* <List>
                     <ListItem>
                         {data? data.name :null }
                     </ListItem>
@@ -80,10 +90,97 @@ class Orders extends Component {
                             return <ListItemText>{element.notes}</ListItemText>
                         }) :null }
                     </ListItem>
-                </List>
+                </List> */}
+
+                <Paper style={styles.root}>
+                    <TableHead style={styles.table}>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Customer Name</TableCell>
+                                <TableCell numeric>Suburb</TableCell>
+                                <TableCell numeric>Material</TableCell>
+                                <TableCell numeric>Colour</TableCell>
+                                <TableCell numeric>Protein</TableCell>
+                                <TableCell numeric>Room</TableCell>
+                                <TableCell numeric>Length</TableCell>
+                                <TableCell numeric>Width</TableCell>
+                                <TableCell numeric>Style</TableCell>
+                                <TableCell numeric>Notes</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            <TableRow>
+                                <TableCell>
+                                    {data? data.name :null }
+                                </TableCell>
+                                <TableCell>
+                                    {data&&suburbs? (suburbs.filter(item => {
+                                        if(item.id === data.suburb) {
+                                            return true
+                                        }else{
+                                            return false
+                                        }
+                                        }))[0].name 
+                                        : null
+                                    }
+                                </TableCell>
+                                <TableCell>
+                                    {data&&material? (material.filter(item => {
+                                        if(item.id === data.material) {
+                                            return true
+                                        }else{
+                                            return false
+                                        }
+                                        }))[0].name 
+                                        : null
+                                    } 
+                                </TableCell>
+                                <TableCell>
+                                    {data&&colour? (colour.filter(item => {
+                                        if(item.id === data.colour) {
+                                            return true
+                                        }else{
+                                            return false
+                                        }
+                                        }))[0].name 
+                                        : null
+                                    } 
+                                </TableCell>
+                                {data? data.rows.map(function(element, index) {
+                                    return <TableCell>{element.room}</TableCell>
+                                }) :null }
+                                {data? data.rows.map(function(element, index) {
+                                return <TableCell>{element.length}</TableCell>
+                                }) :null }
+                                {data? data.rows.map(function(element, index) {
+                                    return <TableCell>{element.width}</TableCell>
+                                }) :null }
+                                {data? data.rows.map(function(element, index) {
+                                    return <TableCell>{element.pleats}</TableCell>
+                                }) :null }
+                                {data? data.rows.map(function(element, index) {
+                                    return <TableCell>{element.style}</TableCell>
+                                }) :null }
+                                {data? data.rows.map(function(element, index) {
+                                    return <TableCell>{element.notes}</TableCell>
+                                }) :null }
+                            </TableRow> 
+                        </TableBody>
+                    </TableHead>
+                </Paper>
             </div>
         )
     }
+}
+
+const styles = {
+    root: {
+        width: '100%',
+        overflowX: 'auto',
+      },
+      table: {
+        minWidth: 700,
+      },
 }
 
 export default Orders
