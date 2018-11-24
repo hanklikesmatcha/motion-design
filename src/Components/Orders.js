@@ -29,8 +29,30 @@ class Orders extends Component {
 
     render() {
         const {data, suburbs, material, colour} = this.state
+        let suburbName = ''
+        let materialName = ''
+        let colourName = ''
+        if( data && suburbs){
+            const resultArray = suburbs.filter(item => item.id === data.suburb)
+            if(resultArray.length > 0) {
+                suburbName = resultArray[0].name
+            }
+        }
+        if( data && material){
+            const resultArray = material.filter(item => item.id === data.material)
+            if(resultArray.length > 0) {
+                materialName = resultArray[0].name
+            }
+        }
+        if( data && colour){
+            const resultArray = colour.filter(item => item.id === data.colour)
+            if(resultArray.length > 0) {
+                colourName = resultArray[0].name
+            }
+        }
         return (
             <div>
+                <text>{console.log(colourName)}</text>
                 <Typography variant='display1'>
                     Orders
                 </Typography>
@@ -114,38 +136,15 @@ class Orders extends Component {
                                     {data? data.name :null }
                                 </TableCell>
                                 <TableCell>
-                                    {data&&suburbs? (suburbs.filter(item => {
-                                        if(item.id === data.suburb) {
-                                            return true
-                                        }else{
-                                            return false
-                                        }
-                                        }))[0].name 
-                                        : null
-                                    }
+                                    {suburbName}
                                 </TableCell>
                                 <TableCell>
-                                    {data&&material? (material.filter(item => {
-                                        if(item.id === data.material) {
-                                            return true
-                                        }else{
-                                            return false
-                                        }
-                                        }))[0].name 
-                                        : null
-                                    } 
+                                    {materialName}
                                 </TableCell>
                                 <TableCell>
-                                    {data&&colour? (colour.filter(item => {
-                                        if(item.id === data.colour) {
-                                            return true
-                                        }else{
-                                            return false
-                                        }
-                                        }))[0].name 
-                                        : null
-                                    } 
+                                    {colourName} 
                                 </TableCell>
+                                {/* <TableRow> */}
                                 {data? data.rows.map(function(element, index) {
                                     return <TableCell>{element.room}</TableCell>
                                 }) :null }
@@ -164,6 +163,7 @@ class Orders extends Component {
                                 {data? data.rows.map(function(element, index) {
                                     return <TableCell>{element.notes}</TableCell>
                                 }) :null }
+                                {/* </TableRow> */}
                             </TableRow> 
                         </TableBody>
                     </TableHead>
