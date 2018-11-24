@@ -11,7 +11,7 @@ import MenuItem from '@material-ui/core/MenuItem'
 
 import FormTable from './FormTable'
 
-import { getColours, getMaterials, getSuburbs, getData, postData } from '../services/Product'
+import { getColours, getMaterials, getSuburbs } from '../services/Product'
 
 class Form extends Component {
     state = {
@@ -173,9 +173,6 @@ class Form extends Component {
 }
 
 const styles = {
-    form: {
-
-    },
     selector: {
         margin: 20,
     },
