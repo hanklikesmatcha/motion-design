@@ -59,7 +59,7 @@ class Form extends Component {
     render() {
         const { colourOptions, materialOptions, suburbOptions } = this.state
         return (
-            <form style={styles.form}  onSubmit={() => this.submit} autoComplete="off">
+            <form style={styles.form} autoComplete="off">
             <TextField
                 id="outlined-uncontrolled"
                 label="Customer"

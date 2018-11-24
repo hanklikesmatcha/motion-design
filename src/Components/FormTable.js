@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactDataGrid from "react-data-grid"
 import Typography from '@material-ui/core/Typography'
 import { Button } from '@material-ui/core'
 
 import { postData } from '../services/Product'
 
-  
 
 class FormTable extends React.Component {
     constructor(props) {
@@ -23,7 +22,7 @@ class FormTable extends React.Component {
         this.state = { rows, selectedIndexes: [] }
     }
     componentDidUpdate() {
-        console.log(this.state)
+        // console.log(this.state)
     }
     rowGetter = i => {
         return this.state.rows[i]
@@ -93,11 +92,19 @@ class FormTable extends React.Component {
     }
 
     submit() {
-        this.setState(this.props.getData)
-        console.log(this.state)
+        // this.setState(this.props.getData)
+        const data = {
+            name: this.props.getData.customerName,
+            suburb: this.props.getData.suburb,
+            material: this.props.getData.material,
+            colour: this.props.getData.colour,
+            rows: this.state.rows,
+        }
+        console.log(data)
         // post data to server
-        const data = {data: this.state}
+        // const data = {data: this.state}
         postData(data)
+        window.location.reload()
     }
 
     render() {

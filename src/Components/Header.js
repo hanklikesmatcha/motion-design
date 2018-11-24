@@ -8,15 +8,15 @@ class Header extends Component {
     render() {
         return (
             <Grid>
-                <Typography variant='display3' style={styles.header}>
-                    LOGO
-                </Typography> 
-                <Typography variant='display1' style={styles.userName}>
-                    <Avatar style={styles.avatar}r>JB</Avatar>
-                    <text>Jack Black</text>
-                </Typography>
+                <div>
+                    <Typography variant='display3' style={styles.header}>LOGO</Typography>
+                    <Typography variant='display1' style={styles.userName}>
+                        <Avatar style={styles.avatar}r>JB</Avatar>
+                            Jack Black
+                    </Typography>
+                </div> 
                 <Typography variant='display2' style={styles.subTitle}>
-                    Product View
+                        Product View
                 </Typography>
             </Grid>
         )
@@ -26,13 +26,14 @@ const styles = {
     header: {
     },
     avatar: {
-        float: "left"
+        float: 'left',
+        marginRight: 20
     },
     userName: {
-        // textAlign: 'right'
+        float: 'right',
+        paddingTop: 20
     },
     subTitle: {
-       
     }
 }
 

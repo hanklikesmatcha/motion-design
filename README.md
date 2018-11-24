@@ -1,7 +1,7 @@
 ## Get Started
 
 ### server setup
-1. java -jar server-1.0.3.jar
+1. npm run server or java -jar server-1.0.3.jar
 2. go to http://localhost:8181/openapi.json 
 
 ### npm start
@@ -15,6 +15,9 @@
 2. It correctly bundles React in production mode and optimizes the build for the best performance
 
 *See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.*
-### npm run eject
 
-### npm test
+## Reference
+1. [Motion Design](https://motiondesign.nz/)
+2. [Material Design](https://material-ui.com/)
+3. [React Data Grid](https://adazzle.github.io/react-data-grid/)
+4. [Swagger](https://editor.swagger.io/)
