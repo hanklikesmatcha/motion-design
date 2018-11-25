@@ -1,5 +1,5 @@
 ## About 
-<img src="./pictures/example.png" width="400">
+<img src="./pictures/example.png" width="700">
 This is a test designed by Motion Design. To test the candidates have sufficient knowledge of front-end.
 
 ## Get Started
@@ -7,7 +7,7 @@ This is a test designed by Motion Design. To test the candidates have sufficient
 ### server setup
 *npm run server has been written in package.json*
 1. npm run server or java -jar server-1.0.3.jar
-*2. (optional)go to http://localhost:8181/openapi.json*
+2. (optional)go to http://localhost:8181/openapi.json
 
 ### npm start
 
@@ -23,9 +23,11 @@ This is a test designed by Motion Design. To test the candidates have sufficient
 
 ### User Acceptance criteria:
 1. The table should support backward and forwards navigation using tabs
+
 Done. By implementing React Data Grid, users many navigate the form with arrow keys and tab
 
 2. Pressing tab from the last cell in the table should create a new row
+
 To be discussed.
 
 React Data Grid could use arrow keys, tab and enter to navigation
@@ -37,12 +39,15 @@ But I can build a table by myself, or use nother third package, such as React Bo
 For this task, I think this package might provide a better user experience
 
 3. You must load and display the suburbs, material, and colours from the given server
+
 Done. Applying **fetch** function, to  get data from back-end
 
 4. There must be a functional save button
+
 Done. By clicking the **Save ALL CHANGES** users may send the data to the server
 
 5. Saved data must be restored on refresh or page load
+
 Done. The page will get the data after refreshing the page automatically by clicking the **Save ALL CHANGES**
 
 ## Wireframe
