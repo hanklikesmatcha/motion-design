@@ -56,13 +56,13 @@ Applying **fetch** function, to  get data from back-end
 
 Done. 
 
-By clicking the **Save ALL CHANGES** users may send the data to the server
+By clicking the **SAVE ALL CHANGES** users may send the data to the server
 
 5. Saved data must be restored on refresh or page load
 
 Done. 
 
-The page will get the data after refreshing the page automatically by clicking the **Save ALL CHANGES**
+The page will get the data after refreshing the page automatically by clicking the **SAVE ALL CHANGES**
 
 ## Wireframe
 <img src="./pictures/wireframe.png" width="350">
