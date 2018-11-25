@@ -72,6 +72,7 @@ class FormTable extends React.Component {
         this.setState(this.state.selectedIndexes)
         console.log('added new row')
     }
+
     deleteRow = () => { 
         console.log(this.state.selectedIndexes)
         const selectedIndexes = this.state.selectedIndexes
@@ -105,9 +106,14 @@ class FormTable extends React.Component {
         postData(data).then(() => {window.location.reload()})
     }
 
+    keyPress(event) {
+        console.log("pressed")
+        console.log(event)
+    }
+
     render() {
         return (
-            <div>
+            <div onKeyPress={event => this.keyPress(event)}>
                 <Typography variant='display1'>
                     Curtains
                 </Typography>

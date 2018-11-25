@@ -28,7 +28,6 @@ export function getColours() {
     return getJson(`${URL}/colours`)
 }
 
-
 export function getMaterials() {
     return getJson(`${URL}/materials`)
 }
