@@ -93,7 +93,6 @@ class FormTable extends React.Component {
     }
 
     submit() {
-        // this.setState(this.props.getData)
         const data = {
             name: this.props.getData.customerName,
             suburb: this.props.getData.suburb,
@@ -102,7 +101,7 @@ class FormTable extends React.Component {
             rows: this.state.rows,
         }
         console.log("========", data)
-        // post data to server
+        // post data to server & reload
         postData(data).then(() => {window.location.reload()})
     }
 
@@ -140,7 +139,7 @@ class FormTable extends React.Component {
                     onGridRowsUpdated={this.onGridRowsUpdated}
                 />
                 <Button onClick={this.addNewRow} variant='contained' style={{float: 'right', margin: 20}}>Add</Button>
-                <Button onClick={this.deleteRow} variant='outlined' color='secondary' style={{ margin: 20 }}>Back</Button>
+                <Button onClick={this.deleteRow} variant='outlined' color='secondary' style={{ margin: 20 }}>Delete Rows</Button>
                 <Button onClick={()=> this.submit()} variant='outlined' color='primary' style={{ margin: 20 }}>Save all changes</Button>
             </div>
         )

@@ -21,6 +21,12 @@ This is a test designed by Motion Design. To test the candidates have sufficient
 
 *See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.*
 
+### Manual
+- Selection Box: Users may click multiple selection boxes
+- Add: Creating a new row when the user is clicking ADD button each time
+- Delete Rows: By clicking Selection Box, users can delete multiple rows in once
+- Save All Changes: Submit contact, oder details to the system
+
 ### User Acceptance criteria:
 1. The table should support backward and forwards navigation using tabs
 
