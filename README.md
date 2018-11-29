@@ -4,10 +4,10 @@ This is a test designed by Motion Design. To test the candidates have sufficient
 
 ## Get Started
 
-### server setup
+### npm run server
 *npm run server has been written in package.json*
 1. npm run server or java -jar server-1.0.3.jar
-2. (optional)go to http://localhost:8181/openapi.json
+2. (optional) Go to http://localhost:8181/openapi.json
 
 ### npm start
 
@@ -25,10 +25,10 @@ This is a test designed by Motion Design. To test the candidates have sufficient
 - Selection Box: Users may click multiple selection boxes
 - Add: Creating a new row when the user is clicking ADD button each time
 - Delete Rows: By clicking Selection Box, users can delete multiple rows in once
-- Save All Changes: Submit contact, oder details to the system
+- Save All Changes: Submit client contact and order details to the system
 
 ### User Acceptance criteria:
-1. The table should support backward and forwards navigation using tabs
+1. The table should support backward and forwards navigation using tab
 
 Done. 
 
@@ -42,7 +42,7 @@ React Data Grid can use arrow keys, tab and enter to let user get the cell they 
 
 In React Data Grid, I couldn't fetch **Tab** in the table built by React Data Data, so I wasn't able to use **Tab** to create a new row
 
-But I can build a table by myself, or use nother third package, such as React Bootstrap Table
+But I can build a table by myself, or use other third packages, such as React Bootstrap Table
 
 For this task, I think this package might provide a better user experience
 
